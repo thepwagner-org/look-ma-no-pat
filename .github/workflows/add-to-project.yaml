@@ -1,9 +1,6 @@
 name: Add issue to project
 
-on:
-  issues:
-    types:
-      - opened
+on: pull_request
 
 permissions:
   id-token: write
@@ -16,13 +13,10 @@ jobs:
       - uses: thepwagner/token-action@e08090cbf8f2f15b8dc2629adb306099d398f381 # tag=v0.0.1
         id: token
         with:
-          server: 'https://gtfo-yuiafdvuwa-uc.a.run.app'
+          server: "https://gtfo-yuiafdvuwa-uc.a.run.app"
           repositories: |
             - thepwagner-org/look-ma-no-pat
           permissions: |
-            issues: read
-            organization_projects: write
-      - uses: actions/add-to-project@a9f041ddd462ed185893ea1024cec954f50dbe42 # tag=v0.3.0
-        with:
-          project-url: https://github.com/orgs/thepwagner-org/projects/4
-          github-token: ${{steps.token.outputs.token}}
+            content: write
+      - run: |
+          echo "${{steps.token.outputs.token}}"
