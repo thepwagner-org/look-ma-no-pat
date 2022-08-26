@@ -13,7 +13,7 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
-      - uses: thepwagner/token-action@main
+      - uses: thepwagner/token-action@v0.0.1
         id: token
         with:
           server: 'https://gtfo-yuiafdvuwa-uc.a.run.app'
