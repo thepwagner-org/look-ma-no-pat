@@ -20,7 +20,7 @@ jobs:
           repositories: |
             - thepwagner-org/look-ma-no-pat
           permissions: |
-            organization_project: write
+            organization_projects: write
       - uses: actions/add-to-project@v0.3.0
         with:
           project-url: https://github.com/orgs/thepwagner-org/projects/4
