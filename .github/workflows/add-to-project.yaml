@@ -14,7 +14,7 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
-      - uses: thepwagner/token-action@c42b5214f608754959a3a8969153d6afae838c42 # tag=v0.0.2
+      - uses: thepwagner/token-action@cleanup-after-yourself
         id: token
         with:
           server: 'https://gtfo-yuiafdvuwa-uc.a.run.app'
@@ -23,7 +23,7 @@ jobs:
           permissions: |
             issues: read
             organization_projects: write
-      - uses: actions/add-to-project@cleanup-after-yourself
+      - uses: actions/add-to-project@a9f041ddd462ed185893ea1024cec954f50dbe42 # tag=v0.3.0
         with:
           project-url: https://github.com/orgs/thepwagner-org/projects/4
           github-token: ${{steps.token.outputs.token}}
