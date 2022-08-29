@@ -14,7 +14,7 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
-      - uses: thepwagner/token-action@cleanup-after-yourself
+      - uses: thepwagner/token-action@c42b5214f608754959a3a8969153d6afae838c42 # tag=v0.0.2
         id: token
         with:
           server: 'https://gtfo-yuiafdvuwa-uc.a.run.app'
