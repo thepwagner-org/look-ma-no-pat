@@ -23,7 +23,7 @@ jobs:
           permissions: |
             issues: read
             organization_projects: write
-      - uses: actions/add-to-project@4756e6330fe1e0a736690d3cfd9f11c9399c2ed4 # v0.4.1
+      - uses: actions/add-to-project@31b3f3ccdc584546fc445612dec3f38ff5edb41c # v0.5.0
         with:
           project-url: https://github.com/orgs/thepwagner-org/projects/4
           github-token: ${{steps.token.outputs.token}}
